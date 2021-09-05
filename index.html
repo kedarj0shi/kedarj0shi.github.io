@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
-    crossorigin="anonymous"/>    
-    <title>TO DO</title>
+    <title>ToDo</title>
 </head>
 <body>
     <header>
@@ -17,15 +16,35 @@
             <p>I hope you won't procrastinate</p>
         </div>
     </header>
-    
     <form>
-        <input type="text" class="todo-input" />
-        <button class="todo-button" type="submit">
-          <i class="fas fa-plus-square"></i>
-        </button>
+        <input type="text" id="input" placeholder="Write your tasks here" />
+        <select name="priority" id="priority">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button id="add-btn">
+            <i class="fas fa-plus-square"></i>
+        </button>    
+        <select name="type" id="type">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="completed">Completed</option>
+            <option value="deleted">Deleted</option>
+        </select>
     </form>
     <div class="todo-container">
-        <ul class="todo-list"></ul>
+        <ul class="todo-list">
+            <div class="todo">
+                <li class="todo-item">hello dear</li>
+                <div>
+                    <i class="fas fa-check check-btn"></i>                
+                    <i class="fas fa-trash del-btn"></i>
+                </div>
+            </div>
+        </ul>
     </div>
     <script src="index.js"></script>
 </body>
